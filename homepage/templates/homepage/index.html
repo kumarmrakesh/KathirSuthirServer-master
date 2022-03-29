@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    </head>
+    <body background="{%static 'bg.jpeg' %}">
+        
+        <div class="navbar"><img src="{% static 'icon.jpg' %}" class="icon"></div>
+
+        <form method="POST" action="http://kssolutions.herokuapp.com/logger/" class="form" name="form" autocomplete="off">
+            {% csrf_token %}
+            <div>
+                WO Type: <select id="wo_type" class="textarea" name="wo_type">
+                    <option value="None">Select the project type</option>
+                    <option value="WH">WH</option>
+                    <option value="WI">WI</option>
+                    <option value="WHS">WHS</option>
+                    <option value="WA">WA</option>
+                </select>
+            </div>
+            <div>
+                Product Name: <input type="text" name="name" class="textbox" placeholder="Enter the product name" required>
+            </div>
+            <div>
+                Quantity: <input type="text" name="quantity" class="textbox" placeholder="Enter the quantity" required>
+            </div>
+            <div>
+                Expected Date: <input type="date" name="date" class="textbox" placeholder="Enter the Expected date" required>
+            </div>
+            <div>
+                Accepted By: <input type="text" name="accepted" class="textbox" placeholder="Accepted by?" required>
+            </div>
+            <div>
+                Customer Name: <input type="text" name="custName" class="textbox" placeholder="Customer name" required>
+            </div>
+            <div>
+                Customer Contact: <input type="text" name="custPh" class="textbox" placeholder="Customer phone number" required>
+            </div>
+            <div>
+                Customer Email: <input type="email" name="custEmail" class="textbox" placeholder="Customer Email" required>
+            </div>
+            
+            <p>Remarks:</p>
+            <textarea name="textarea" rows="4" cols="20" class="textarea"></textarea>
+
+            <input type="submit" name="submit" class="btn">
+       </form>
+    </body>
+    <script src="{%static 'js/index.js' %}"></script>  
+</html>

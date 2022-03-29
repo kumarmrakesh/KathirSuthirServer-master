@@ -1,0 +1,132 @@
+{% load static %}
+<html>
+    <head>
+        <title>Requirements</title>
+        <link rel="stylesheet" href="{% static 'css/mail.css' %}">
+    </head>
+    <body>
+        <div class="navbar"><img src="{%static 'icon.jpg' %}" class="icon"></div> 
+        
+        <form name="input" action="http://kssolutions.herokuapp.com/logger/test" autocomplete="off">
+            {% csrf_token %}
+            <div class="grid-col">
+                <div class="grid">
+                    <div class="label-ques">Product name: <label class="label">{{name}}</label></div><br>
+                    <div class="label-ques">Serial no: <label class="label">{{type}} - {{s_no}}</label></div><br>
+                    <div class="label-ques">Quantity: <label class="label">{{quantity}}</label></div><br>
+                </div>
+                <div class="grid">
+                    <div class="label-ques">Expected Submission date: <label class="label">{{e_date}}</label></div><br>
+                    <div class="label-ques">Work Order issue date: <label class="label">{{wo_issuedate}}</label></div><br>
+                </div>
+                <div class="grid">
+                    <div class="label-ques">Accepted by: <label class="label">{{accepted_by}}</label></div><br>
+                    <div class="label-ques">Customer: <label class="label">{{customer}}</label></div><br>
+                </div>
+            </div>
+            <hr>
+            <div class="container">
+            <div class="questions">
+                <p>No of Relay o/p needed:</p>
+                <input type="radio" name="relay" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="relay" id="No" value="no">No<br>
+                <input type="radio" name="relay" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q1-remarks">
+            </div>
+            <div class="questions">
+                <p>Is any sensor needed npn (or) pnp:</p>
+                <input type="radio" name="sensor" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="sensor" id="No" value="no">No<br>
+                <input type="radio" name="sensor" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q2-remarks">
+            </div>
+            <div class="questions">
+                <p>Display required whether LCD or 7 Segment:</p>
+                <input type="radio" name="display" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="display" id="No" value="no">No<br>
+                <input type="radio" name="display" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q3-remarks">
+            </div>
+            <div class="questions">
+                <p>No of switches needed and specify (up,down,...):</p>
+                <input type="radio" name="switch" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="switch" id="No" value="no">No<br>
+                <input type="radio" name="switch" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q4-remarks">
+            </div>
+            <div class="questions">
+                <p>Is any prefered appearance required:</p>
+                <input type="radio" name="appearance" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="appearance" id="No" value="no">No<br>
+                <input type="radio" name="appearance" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q5-remarks">
+            </div>
+            <div class="questions">
+                <p>Input power supply ranges:</p>
+                <input type="radio" name="power" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="power" id="No" value="no">No<br>
+                <input type="radio" name="power" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q6-remarks">
+            </div>
+            <div class="questions">
+                <p>Product Application:</p>
+                <input type="radio" name="application" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="application" id="No" value="no">No<br>
+                <input type="radio" name="application" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q7-remarks">
+            </div>
+            <div class="questions">
+                <p>molex or pheonix wired for output:</p>
+                <input type="radio" name="wired" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="wired" id="No" value="no">No<br>
+                <input type="radio" name="wired" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q8-remarks">
+            </div>
+            <div class="questions">
+                <p>Box dimension if any:</p>
+                <input type="radio" name="box" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="box" id="No" value="no">No<br>
+                <input type="radio" name="box" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q9-remarks">
+            </div>
+            <div class="questions">
+                <p>Clamp needed:</p>
+                <input type="radio" name="clamp" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="clamp" id="No" value="no">No<br>
+                <input type="radio" name="clamp" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q10-remarks">
+            </div>
+            <div class="questions">
+                <p>Power cord Length:</p>
+                <input type="radio" name="chord" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="chord" id="No" value="no">No<br>
+                <input type="radio" name="chord" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q11-remarks">
+            </div>
+            <div class="questions">
+                <p>If any min/max current/voltage range required:</p>
+                <input type="radio" name="min/max" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="min/max" id="No" value="no">No<br>
+                <input type="radio" name="min/max" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q12-remarks">
+            </div>
+            <div class="questions">
+                <p>If any special note down:</p>
+                <input type="radio" name="special" id="Yes" value="yes" checked>Yes<br>
+                <input type="radio" name="special" id="No" value="no">No<br>
+                <input type="radio" name="special" id="NA" value="na">NA<br>
+                 Remarks <input type="text" class="textbox" name="q13-remarks">
+            </div>
+            <input class="btn" type="button" name="checker" id="checker" value="Check">
+            <div class="questions drop-down" id="drop-down">
+                <table class="table">
+                    
+                </table>
+                <input type="button" name="change" class="btn" value="Change">
+                <input type="submit" name="Submit" class="btn">
+            </div>
+        </div>
+        </form>
+    </body>
+    <script src="{%static 'js/mail.js' %}"></script>
+</html>
