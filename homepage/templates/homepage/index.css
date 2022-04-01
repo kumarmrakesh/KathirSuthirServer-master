@@ -1,0 +1,108 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin: 0px;
+    background-image: radial-gradient(circle, rgb(150, 150, 150,1),rgb(255,255,255,0.5));
+}
+
+p{
+   padding: 15px;
+   margin-left: 60px;
+   margin-bottom: 10px;
+   font-weight: bolder;
+   font-size: x-large;
+}
+
+div{
+    background-color: rgb(255,255,255,0.8);
+    width: 40%;
+    display: inline-block;
+    height: 60px;
+    border-radius: 10px;
+    margin: 15px 40px 15px 30px;
+    padding: 20px 10px 10px 40px;
+}
+
+.textbox{
+    border-radius: 2px;
+    background-color: rgb(255,255,255,0.3);
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(200,200,200);
+    margin: 10px;
+    width: 400px;
+    height: 30px;
+}
+
+.textbox:focus{
+    transition: border-bottom-color 1s;
+    border-bottom-color: rgb(0,0,0);
+    outline: thin;
+}
+
+.textarea{
+    display: inline-block;
+    border-radius: 2px;
+    background-color: white;
+    width: 50%;
+    height: 60px;
+    border: rgb(200,200,200) solid;
+}
+
+.textarea{
+    margin-left: 70px;
+}
+
+.navbar{
+    padding: 0px;
+    border-radius: 0px;
+    padding: 2px;
+    box-shadow: none;
+    border-style: none;
+    margin: 0px;
+    width: 100%;
+    height: 500px;
+    display: block;
+    background-color: rgb(0, 0, 0,0.5);
+    position: absolute;
+    z-index: -1;
+}
+
+.btn{
+    border: none;
+    display: block;
+    font-size: large;
+    background-color: rgb(0,0,0);
+    color: white;
+    width: 90px;
+    height: 50px;
+    margin: 35px auto;
+}
+
+.btn:hover{
+    background-color: rgb(255,255,255);
+    color: black;
+    box-shadow: none;
+    border: black 2px solid;
+    font-weight: bold;
+}
+
+.icon{
+    display: inline-block;
+    width: 500px;
+    position: static;
+}
+
+.form{
+    width:60%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px 0 20px 0;
+    box-shadow: 10px 10px 10px 0px rgb(45,45,45,0.2);
+    border-left: rgb(50, 50, 50) 5px solid;
+    position: absolute;
+    left: 20%;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+}
